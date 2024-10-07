@@ -15,20 +15,20 @@ body{
 }
 #boton {
     width:100%;
-    padding: 10px 20px; /* Relleno del botón */
-    font-family: 'Permanent Marker', cursive; /* Fuente atractiva */
-    font-size: 1.5rem; /* Tamaño de la fuente del botón */
-    color: white; /* Color del texto */
-    background-color: #1dff098e; /* Color de fondo atractivo */
-    border: none; /* Sin borde */
-    border-radius: 5px; /* Esquinas redondeadas */
-    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
-    transition: background-color 0.3s, transform 0.3s; /* Animaciones */
+    padding: 10px 20px; 
+    font-family: 'Permanent Marker'; 
+    font-size: 1.5rem; 
+    color: white; 
+    background-color: #1dff098e; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    transition: background-color 0.3s, transform 0.3s; 
 }
 
 #boton:hover {
-    background-color: #16c68f; /* Color de fondo al pasar el ratón */
-    transform: scale(1.05); /* Aumentar tamaño del botón al pasar el ratón */
+    background-color: #16c68f; 
+    transform: scale(1.05); 
 }
 
 .carta {
@@ -37,18 +37,18 @@ body{
     text-align: center;
     border-radius: 5px;
     background-color: rgba(61, 61, 61, 0.288);
-    max-width: 250px; /* Ajustar el tamaño máximo de la carta */
-    overflow: hidden; /* Asegurarse de que no se salgan las imágenes */
+    max-width: 250px; 
+    overflow: hidden; 
     
     
 }
 .carta img {
     width: 100%;
     height: auto;
-    transition: filter 0.3s ease; /* Animación para hacer suave el efecto */
+    transition: filter 0.3s ease; 
     filter: brightness(1.1) saturate(1.2) blur(2px)}
 .carta img:hover {
-    filter: brightness(1.3) saturate(1.5) blur(0); /* Aumenta el efecto al pasar el ratón */
+    filter: brightness(1.3) saturate(1.5) blur(0); 
 }
 
 
@@ -62,7 +62,7 @@ img{
     height: auto;
     
 }
-/* El splash art a pantalla completa */
+
 .splash-fullscreen {
     position: fixed;
     top: 0;
@@ -81,17 +81,17 @@ img{
     max-width: 90%;
     max-height: 90%;
     border-radius: 10px;
-    filter: brightness(1.1) saturate(1.3); /* Aplicamos también aquí más brillo y saturación */
+    filter: brightness(1.1) saturate(1.3); 
 }
 .titulo-campeon {
-    color: white; /* Color del texto del título */
-    font-family: 'Permanent Marker'; /* Fuente llamativa para el título */
-    font-size: 2rem; /* Tamaño del texto */
-    margin: 20px; /* Espacio alrededor del texto */
-    text-align: center; /* Centrar el texto */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra para darle profundidad */
+    color: white; 
+    font-family: 'Permanent Marker'; 
+    font-size: 2rem; 
+    margin: 20px; 
+    text-align: center; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
 }
-/* Animación suave de aparición */
+
 @keyframes fadeIn {
     from {
         opacity: 0;

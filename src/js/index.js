@@ -7,7 +7,7 @@ const DOM = {
     
 };
 
-let campeonesData = {}; // Objeto para almacenar los campeones
+let campeonesData = {}; 
 
 boton.addEventListener('click', mostrarCampeones);
 
@@ -16,7 +16,7 @@ async function getCampeones() {
     try {
         const respuesta = await fetch(url);
         const datos = await respuesta.json();
-        campeonesData = datos.data; // Guardar datos en la variable
+        campeonesData = datos.data; 
         return campeonesData;
     } catch (error) {
         console.log(error.message);
@@ -51,32 +51,31 @@ function mostrarInformacion(datos) {
 }
 
 function mostrarInfo(id) {
-    // Buscar el campeón en los datos obtenidos
     const champData = campeonesData[id];
     if (!champData) {
         console.error('Campeón no encontrado');
-        return; // Salir si no se encuentra el campeón
+        return; 
     }
 
-    const campeon = new Campeon(champData); // Crear el objeto Campeon con los datos completos
+    const campeon = new Campeon(champData); 
 
-    // Crear el div del splash art a pantalla completa
+    
     const splashDiv = document.createElement('div');
     splashDiv.classList.add('splash-fullscreen');
 
-    // Añadir la imagen del splash art y el título del campeón
+    
     splashDiv.innerHTML = `
         <img src="${campeon.splasArt}" alt="${campeon.name}">
         <div class="titulo-campeon">${campeon.titulo}</div> <!-- Título del campeón -->
     `;
 
-    // Añadir el div al body
+  
     document.body.appendChild(splashDiv);
 
-    // Cerrar el splash art al hacer clic fuera de la imagen
+   
     splashDiv.addEventListener('click', (event) => {
         if (event.target === splashDiv) {
-            splashDiv.remove(); // Eliminar el splash art de la pantalla
+            splashDiv.remove(); 
         }
     });
 }
